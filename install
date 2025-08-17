@@ -46,3 +46,6 @@ sudo docker rm $(sudo docker ps -aq)
 
 # ყველა volume-ის წაშლა (უსაფრთხოდ!)
 sudo docker volume prune -f
+# გაჩერებული კონტეინერების ხელახლა გაშვება
+sudo docker start monkey-mongo
+sudo docker start -ai monkey-island
