@@ -36,3 +36,13 @@ sudo docker run \
     --name monkey-island \
     --network=host \
     infectionmonkey/monkey-island:latest
+
+#ყურადღება!!! დოკერის დაცემის შემთხვევაში გავასუფთავოთ კონტეინერები 
+# ყველა კონტეინერის გაჩერება
+sudo docker stop $(sudo docker ps -aq)
+
+# ყველა კონტეინერის წაშლა
+sudo docker rm $(sudo docker ps -aq)
+
+# ყველა volume-ის წაშლა (უსაფრთხოდ!)
+sudo docker volume prune -f
