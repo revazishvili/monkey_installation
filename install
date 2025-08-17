@@ -1,0 +1,38 @@
+sudo apt update && sudo apt upgrade -y
+sudo apt install -y apt-transport-https ca-certificates curl gnupg lsb-release
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+sudo apt update
+sudo apt install -y docker-ce docker-ce-cli containerd.io
+sudo systemctl start docker
+sudo systemctl enable docker
+sudo usermod -aG docker $USER
+###########################################
+#აუცილებელი არაა მაგრამ თუ პორტი დაკეტილი იქნება დავუშვათ UFW
+sudo ufw allow 5000/tcp  # Monkey Island port
+sudo ufw enable
+#############################
+##########################
+#შევამოწმოთ დოკერი
+docker --version
+sudo docker run hello-world
+####################################
+#მონკის ინსტალაცია და გაშვება
+sudo docker pull mongo:6.0
+sudo docker pull infectionmonkey/monkey-island:latest
+
+#დავსტარტოტ მონგო
+sudo docker run \
+    --name monkey-mongo \
+    --network=host \
+    --volume db:/data/db \
+    --detach \
+    mongo:6.0
+
+#დავსტარტოთ მონკი
+sudo docker run \
+    --tty \
+    --interactive \
+    --name monkey-island \
+    --network=host \
+    infectionmonkey/monkey-island:latest
